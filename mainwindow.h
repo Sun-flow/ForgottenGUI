@@ -24,6 +24,8 @@ private slots:
 
     void on_actionSession_Notes_triggered();
 
+    //void readFile();
+
 private:
     Ui::MainWindow *ui;
 

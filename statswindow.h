@@ -2,6 +2,7 @@
 #define STATSWINDOW_H
 
 #include <QWidget>
+#include <QFile>
 
 namespace Ui {
 class StatsWindow;
@@ -17,6 +18,8 @@ public:
 
 private:
     Ui::StatsWindow *ui;
+
+    QFile *statsFile;
 };
 
 #endif // STATSWINDOW_H

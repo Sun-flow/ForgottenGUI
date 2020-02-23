@@ -2,6 +2,9 @@
 #define MEMORIESWINDOW_H
 
 #include <QWidget>
+#include <QTextEdit>
+#include <QFile>
+#include <QDebug>
 
 namespace Ui {
 class MemoriesWindow;
@@ -15,8 +18,16 @@ public:
     explicit MemoriesWindow(QWidget *parent = nullptr);
     ~MemoriesWindow();
 
+private slots:
+
+    void readFile();
+
+    void on_memoryText_textChanged();
+
 private:
     Ui::MemoriesWindow *ui;
+
+    QFile *memsFile;
 };
 
 #endif // MEMORIESWINDOW_H
