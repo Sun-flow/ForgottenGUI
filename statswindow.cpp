@@ -31,7 +31,7 @@ void StatsWindow::readFile(){
 
         while(!stream.atEnd()){
             line = stream.readLine();
-            ui->memoryText->setText(ui->memoryText->toPlainText() + line + "\n");
+            ui->tendsList->setText(ui->tendsList->toPlainText() + line + "\n");
         }
 
     }
