@@ -5,6 +5,7 @@
 #include <QTextEdit>
 #include <QFile>
 #include <QDebug>
+#include "character.h"
 
 namespace Ui {
 class MemoriesWindow;
@@ -16,7 +17,10 @@ class MemoriesWindow : public QWidget
 
 public:
     explicit MemoriesWindow(QWidget *parent = nullptr);
+
     ~MemoriesWindow();
+
+    void loadChar(Character *newChar);
 
 private slots:
 

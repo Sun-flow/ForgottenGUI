@@ -10,6 +10,10 @@ MainWindow::MainWindow(QWidget *parent)
     memWin = new MemoriesWindow;
 }
 
+void MainWindow::loadChar(Character *inChar){
+    memWin->loadChar(inChar);
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;

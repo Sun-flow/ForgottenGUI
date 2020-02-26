@@ -17,6 +17,7 @@ MemoriesWindow::MemoriesWindow(QWidget *parent) :
     this->readFile();
 }
 
+
 MemoriesWindow::~MemoriesWindow()
 {
     delete ui;
@@ -25,6 +26,13 @@ MemoriesWindow::~MemoriesWindow()
         memsFile->close();
     }
 }
+
+void MemoriesWindow::loadChar(Character *newChar){
+    if(memsFile->isOpen()){
+        ui->memoryText->setText(newChar->getMemories());
+    }
+}
+
 
 void MemoriesWindow::readFile(){
     QString line;

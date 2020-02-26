@@ -1,0 +1,14 @@
+<Char Name="TestGuy">
+    <Stats>
+        <Stat Name="Str" Val="1">
+        <Stat Name="Dex" Val="2">
+        <Stat Name="Int" Val="3">
+        <Stat Name="Wis" Val="4">
+        <Stat Name="Con" Val="5">
+    </Stats>
+    <Tendencies>
+        <Tend Name="Aggressive">
+        <Tend Name="Analytical">
+        <Tend NAme="Loyal">
+    </Tendencies>
+</Char>

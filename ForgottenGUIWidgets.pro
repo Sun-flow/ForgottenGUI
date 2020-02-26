@@ -1,4 +1,5 @@
 QT       += core gui
+QT += xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,18 +16,21 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+
 SOURCES += \
     character.cpp \
     main.cpp \
     mainwindow.cpp \
     memorieswindow.cpp \
-    statswindow.cpp
+    statswindow.cpp \
+    xmlreader.cpp
 
 HEADERS += \
     character.h \
     mainwindow.h \
     memorieswindow.h \
-    statswindow.h
+    statswindow.h \
+    xmlreader.h
 
 FORMS += \
     mainwindow.ui \
@@ -37,3 +41,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    XMLChar

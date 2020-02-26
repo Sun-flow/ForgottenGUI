@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "statswindow.h"
 #include "memorieswindow.h"
+#include "character.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +17,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    void loadChar(Character *inChar);
 
 private slots:
     void on_actionStats_triggered();

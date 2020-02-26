@@ -11,16 +11,17 @@ StatsWindow::StatsWindow(QWidget *parent) :
     QString path = qApp->applicationDirPath() + "/bin/stats.txt";
 
     statsFile = new QFile(path);
-    statsFile->open(QIODevice::ReadWrite);
+    statsFile->open(QIODevice::ReadWrite | QIODevice::Text);
 
-    for(int i = 0; i < 9; i++){
-        ui->listWidget->addItem(QString::number(i) + " item here");
-    }
+    this->readFile();
 }
 
 StatsWindow::~StatsWindow()
 {
     delete ui;
+    if(statsFile){
+        statsFile->close();
+    }
 }
 
 void StatsWindow::readFile(){
@@ -31,7 +32,7 @@ void StatsWindow::readFile(){
 
         while(!stream.atEnd()){
             line = stream.readLine();
-            ui->tendsList->setText(ui->tendsList->toPlainText() + line + "\n");
+            ui->tendsList->addItem(line);
         }
 
     }
